@@ -1,0 +1,36 @@
+{
+  "RandomPoetry":
+[
+  {
+
+    "id": 1,
+    "text1": "We've added a bunch of stability improvements, and migrated to a new Hooks-based.",
+
+    "PoetName" : "Muhammad zubair"
+
+  },
+  {
+
+    "id": 2,
+    "text1": "Love all, trust a few, do wrong to none.",
+    "PoetName" : "William Shakespeare"
+
+  },
+  {
+
+    "id": 3,
+    "text1": "I'm not upset that you lied to me, I'm upset that from now on I can't believe you.",
+    "PoetName" : "Friedrich Nietzsche"
+
+  },
+  {
+
+    "id": 4,
+    "text1": "Love never dies a natural death. It dies because we don't know how to replenish its source. It dies of blindness and errors and betrayals. It dies of illness and wounds; it dies of weariness, of witherings, of tarnishings.",
+    "PoetName" : "Friedrich Nietzsche"
+
+  }
+]
+}
+
+
