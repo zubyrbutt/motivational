@@ -1,69 +1,203 @@
-import * as React from 'react';
-import {Button, View, Text, Image, StyleSheet, TouchableOpacity, StatusBar} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import React, {Component} from 'react';
+import {Text, View, StyleSheet, Image, ScrollView, TouchableOpacity} from 'react-native';
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import QuotesScreen from './src/Components/Quotes';
+import LaoTzuQuote from './src/AllPhilosophers/LaoTzu'
+import AlbertEinsteinQuotes from './src/AllPhilosophers/AlbertEinstein'
 
-
-function HomeScreen({navigation}) {
+function MenuScreen({ navigation }){
     return (
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-            <StatusBar barStyle="dark-content" hidden={true} backgroundColor="#00BCD4" translucent={true}/>
-            <Text style={{fontSize: 120, fontWeight: 'bold'}}>"</Text>
-            <Text style={{fontSize: 80, fontWeight: 'bold', marginBottom: -10}}>Status</Text>
-            <Text style={{fontSize: 80, fontWeight: 'bold'}}>Quotes</Text>
+        <View style={styles.container}>
+            <Text style={styles.headerText}>Read & Learn</Text>
+            <ScrollView>
 
-            <TouchableOpacity onPress={() => navigation.navigate('Quotes')}>
-                <View style={styles.ReadQuran}>
+                {/*Lao Tzu List*/}
+                <TouchableOpacity onPress={() => navigation.navigate('LaoTzu')}>
 
-                    <Text style={{
-                        textAlign: 'center',
-                        justifyContent: 'center',
-                        color: 'white',
-                        fontWeight: 'bold',
-                        fontSize: 20,
-                    }}>Go</Text>
+                    <View style={styles.listContainer}>
+                        <View style={styles.imageCircle}>
+                            <Image
+                                style={styles.listImage}
+                                source={require('./src/images/laotzu.jpg')}/>
+                        </View>
+                        <View style={styles.textContainer}>
+                            <Text style={styles.itemTextTitle}>Lao Tzu </Text>
+                            <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={() => navigation.navigate('AlbertEinstein')}>
+
+                    <View style={styles.listContainer}>
+                        <View style={styles.imageCircle}>
+                            <Image
+                                style={styles.listImage}
+                                source={require('./src/images/AlbertEinstein.jpg')}/>
+                        </View>
+                        <View style={styles.textContainer}>
+                            <Text style={styles.itemTextTitle}>Albert Einstein</Text>
+                            <Text style={styles.itemTextSubtitle}>"The best way to cheer yourself is to{"\n"}  cheer somebody else up."</Text>
+
+                        </View>
+                    </View>
+
+                </TouchableOpacity>
+
+
+
+                <View style={styles.listContainer}>
+                    <View style={styles.imageCircle}>
+                        <Image
+                            style={styles.listImage}
+                            source={require('./src/images/laotzu.jpg')}/>
+                    </View>
+                    <View style={styles.textContainer}>
+                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
+                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+
+                    </View>
                 </View>
-            </TouchableOpacity>
+
+                <View style={styles.listContainer}>
+                    <View style={styles.imageCircle}>
+                        <Image
+                            style={styles.listImage}
+                            source={require('./src/images/laotzu.jpg')}/>
+                    </View>
+                    <View style={styles.textContainer}>
+                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
+                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+
+                    </View>
+                </View>
+
+                <View style={styles.listContainer}>
+                    <View style={styles.imageCircle}>
+                        <Image
+                            style={styles.listImage}
+                            source={require('./src/images/laotzu.jpg')}/>
+                    </View>
+                    <View style={styles.textContainer}>
+                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
+                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+
+                    </View>
+                </View>
+
+                <View style={styles.listContainer}>
+                    <View style={styles.imageCircle}>
+                        <Image
+                            style={styles.listImage}
+                            source={require('./src/images/laotzu.jpg')}/>
+                    </View>
+                    <View style={styles.textContainer}>
+                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
+                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+
+                    </View>
+                </View>
+
+                <View style={styles.listContainer}>
+                    <View style={styles.imageCircle}>
+                        <Image
+                            style={styles.listImage}
+                            source={require('./src/images/laotzu.jpg')}/>
+                    </View>
+                    <View style={styles.textContainer}>
+                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
+                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+
+                    </View>
+                </View>
+
+                <View style={styles.listContainer}>
+                    <View style={styles.imageCircle}>
+                        <Image
+                            style={styles.listImage}
+                            source={require('./src/images/laotzu.jpg')}/>
+                    </View>
+                    <View style={styles.textContainer}>
+                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
+                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+
+                    </View>
+                </View>
+            </ScrollView>
+
         </View>
+
     );
+
 }
 
 const Stack = createStackNavigator();
 
-function App() {
+function AllPhilosophers() {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="Home">
-                <Stack.Screen name='home' component={HomeScreen}/>
-                <Stack.Screen name="Quotes" component={QuotesScreen}/>
+                <Stack.Screen name='menu' component={MenuScreen}/>
+                <Stack.Screen name="LaoTzu" component={LaoTzuQuote} />
+                <Stack.Screen name="AlbertEinstein" component={AlbertEinsteinQuotes} />
             </Stack.Navigator>
         </NavigationContainer>
     );
 }
 
-export default App;
+export default AllPhilosophers;
+
 const styles = StyleSheet.create({
-    ImageLogo: {
-        width: 120,
-        height: 120,
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+
     },
-    ReadQuran: {
+    headerText: {
+        color: '#040303',
+        fontSize: 60,
+        margin: 10,
+    },
+    listContainer: {
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+
+        marginTop: 20,
+
+
+    },
+    imageCircle: {
+        width: 65,
+        height: 65,
+        borderRadius: 35,
+        backgroundColor: '#fff',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: 5,
-        width: 80,
-        height: 80,
-        borderRadius: 40,
-        backgroundColor: '#038105',
-        marginTop: 60,
-        shadowColor: '#009432',
-        shadowOffset: {width: 0, height: 1},
-        shadowOpacity: 1,
-        shadowRadius: 2,
-        elevation: 5,
+        elevation: 2,
+
+
     },
+    listImage: {
+        width: 65,
+        height: 65,
+        borderRadius: 30,
+
+    },
+    textContainer: {
+        marginLeft: 15,
+        marginTop: 5,
+    },
+    itemTextTitle: {
+        flexDirection: 'row',
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+    itemTextSubtitle: {},
+
 
 });

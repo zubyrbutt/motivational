@@ -29,4 +29,4 @@ class Main extends Component{
 }
 
 
-AppRegistry.registerComponent(appName, () => Menu);
+AppRegistry.registerComponent(appName, () => Main);
