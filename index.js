@@ -7,6 +7,7 @@ import {AppRegistry, StatusBar, View} from 'react-native';
 import App from './App';
 import {name as appName} from './app.json';
 import SplashScreen from "./src/Components/SplashScreen";
+import Menu from './src/Components/Menu';
 
 
 
@@ -28,4 +29,4 @@ class Main extends Component{
 }
 
 
-AppRegistry.registerComponent(appName, () => Main);
+AppRegistry.registerComponent(appName, () => Menu);
