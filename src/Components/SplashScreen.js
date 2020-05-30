@@ -9,11 +9,11 @@ export default class SplashScreen extends Component {
 
             <View style={styles.container}>
 
-                <StatusBar barStyle="dark-content" hidden={true} backgroundColor="#00BCD4" translucent={true}/>
+                <StatusBar barStyle="dark-content" hidden={true}  translucent={true}/>
                 <View style={styles.coverContainer}>
-                    <Image source={require('../images/cover.jpg')} style={styles.cover}/>
+                    <Image source={require('../images/quote-lcon.png')} style={styles.cover}/>
                 </View>
-                <Text style={{position: 'absolute', bottom: 1,color: '#fff'}}>Version 1.0.0</Text>
+                <Text style={{position: 'absolute', bottom: 1,color: '#ccc'}}>Version 1.0.0</Text>
             </View>
         );
     }
@@ -39,8 +39,8 @@ const styles = StyleSheet.create({
 
     },
     cover: {
-        width: '100%',
-        height: '100%',
+        width: 100,
+        height: 100,
 
 
     },

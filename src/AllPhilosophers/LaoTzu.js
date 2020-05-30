@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, Dimensions} from 'react-native';
+import {Text, View, StyleSheet, Dimensions, StatusBar} from 'react-native';
 import Swiper from 'react-native-swiper';
 
-import AllQuotes from '../data/AllQuotes'
+import LaoTzuQuotes from '../data/laotzu'
 
 const { width } = Dimensions.get('window');
 
@@ -16,10 +16,11 @@ export default class LaoTzu extends Component {
             >
 
                 {
-                    AllQuotes.AllQuotes.map(data => {
+                    LaoTzuQuotes.LaoTzu.map(data => {
                         return (
 
                             <View style={styles.container} key="{data.quotes}">
+                                <StatusBar barStyle="dark-content" hidden={true}  translucent={true}/>
 
                                 <View style={{marginTop: 10, justifyContent: 'center', alignItems: 'center'}}>
                                     <Text
@@ -31,11 +32,9 @@ export default class LaoTzu extends Component {
                                 <View style={styles.PoetryBox}>
                                     <Text style={styles.PoetryText}>{data.quotes}</Text>
 
-                                    <Text style={styles.PoetName}>― {data.name}</Text>
+                                    <Text style={styles.PoetName}>― Lao Tzu</Text>
                                 </View>
                             </View>
-
-
                         );
                     })
                 }
