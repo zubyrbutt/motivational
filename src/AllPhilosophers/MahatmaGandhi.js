@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import {Text, View, StyleSheet, Dimensions, StatusBar, ImageBackground} from 'react-native';
 import Swiper from 'react-native-swiper';
 
-import AlbertEinsteinQuotes from '../data/AlbertEinstein'
+import MahatmaGandhiQuotes from '../data/MahatmaGandhi'
 
 const { width } = Dimensions.get('window');
 
 
-export default class AlbertEinstein extends Component {
+export default class MahatmaGandhi extends Component {
     render() {
         return (
 
@@ -16,20 +16,15 @@ export default class AlbertEinstein extends Component {
             >
 
                 {
-                    AlbertEinsteinQuotes.AlbertEinstein.map(data => {
+                    MahatmaGandhiQuotes.MahatmaGandhi.map(data => {
                         return (
 
                             <View style={styles.container} key="{data.quotes}">
                                 <StatusBar barStyle="dark-content" hidden={true}  translucent={true}/>
-                                <ImageBackground source={require('../images/bg-2.jpg')} style={{width: '100%', height: '100%'}}>
+
+                                <ImageBackground source={require('../images/bg-3.jpg')} style={{width: '100%', height: '100%'}}>
                                     <View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
-                                        <View style={{marginTop:-100}}>
-                                            <Text
-                                                style={{
-                                                    fontSize: 100,
-                                                    fontWeight: 'bold',
-                                                }}>"</Text>
-                                        </View>
+
                                         <View style={styles.PoetryBox}>
                                             <Text style={styles.PoetryText}>{data.quotes}</Text>
 
@@ -37,7 +32,8 @@ export default class AlbertEinstein extends Component {
                                     </View>
 
                                 </ImageBackground>
-                                <Text style={styles.PoetName}>― Oscar Wilde</Text>
+                                    <Text style={styles.PoetName}>― Mahatma Gandhi</Text>
+
                             </View>
                         );
                     })
@@ -61,11 +57,12 @@ export default class AlbertEinstein extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 12,
+        flexDirection: 'column',
+
     },
+
     PoetryBox: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -73,17 +70,17 @@ const styles = StyleSheet.create({
     },
     PoetryText: {
         textAlign: 'center',
-        fontSize: 30,
-        color: '#0F0F0F',
-        fontFamily: 'LittleGloster',
-
+        fontSize: 27,
+        color: '#fff',
+        fontFamily: 'Hitsmaker',
 
     },
     PoetName: {
         fontSize: 16,
         bottom: 100,
-        color: 'black',
+        color: '#fff',
         position: 'absolute',
+
     },
     text: {
         color: '#fff',

@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import {Text, View, StyleSheet, Dimensions, StatusBar} from 'react-native';
 import Swiper from 'react-native-swiper';
 
-import LaoTzuQuotes from '../data/laotzu'
+import PabloPicassoQuotes from '../data/PabloPicasso'
 
 const { width } = Dimensions.get('window');
 
 
-export default class LaoTzu extends Component {
+export default class PabloPicasso extends Component {
     render() {
         return (
 
@@ -16,7 +16,7 @@ export default class LaoTzu extends Component {
             >
 
                 {
-                    LaoTzuQuotes.LaoTzu.map(data => {
+                    PabloPicassoQuotes.PabloPicasso.map(data => {
                         return (
 
                             <View style={styles.container} key="{data.quotes}">
@@ -27,11 +27,12 @@ export default class LaoTzu extends Component {
                                         style={{
                                             fontSize: 100,
                                             fontWeight: 'bold',
+                                            color: '#FFF'
                                         }}>"</Text>
                                 </View>
                                 <View style={styles.PoetryBox}>
                                     <Text style={styles.PoetryText}>{data.quotes}</Text>
-                                    <Text style={styles.PoetName}>― Lao Tzu</Text>
+                                    <Text style={styles.PoetName}>― Pablo Picasso</Text>
                                 </View>
                             </View>
                         );
@@ -56,10 +57,9 @@ export default class LaoTzu extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 12,
+        backgroundColor: '#046251'
     },
     PoetryBox: {
         justifyContent: 'center',
@@ -68,19 +68,20 @@ const styles = StyleSheet.create({
     },
     PoetryText: {
         textAlign: 'center',
-        fontSize: 27,
-        color: '#000',
+        fontSize: 25,
+        color: '#fff',
         fontFamily: 'Hitsmaker',
+        margin: 12
 
     },
     PoetName: {
         fontSize: 16,
         marginTop: 40,
         marginLeft: 100,
-        color: 'black',
+        color: '#fff',
 
 
-}
+    }
 
 
 });

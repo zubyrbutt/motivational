@@ -7,6 +7,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LaoTzuQuote from './src/AllPhilosophers/LaoTzu'
 import AlbertEinsteinQuotes from './src/AllPhilosophers/AlbertEinstein'
 import OscarWildeQuotes from './src/AllPhilosophers/OscarWilde'
+import RumiQuotes from './src/AllPhilosophers/Rumi'
+import MahatmaGandhiQuotes from './src/AllPhilosophers/MahatmaGandhi'
+import NelsonMandelaQuotes from './src/AllPhilosophers/NelsonMandela'
+import PabloPicassoQuotes from './src/AllPhilosophers/PabloPicasso'
+import AbrahamLincolnQuotes from './src/AllPhilosophers/AbrahamLincoln'
+import JohnLennonQuotes from './src/AllPhilosophers/JohnLennon'
+
+
 
 
 function MenuScreen({ navigation }){
@@ -75,83 +83,116 @@ function MenuScreen({ navigation }){
                 </TouchableOpacity>
 
 
+                    {/*Rumi*/}
+                <TouchableOpacity onPress={() => navigation.navigate('Rumi')}>
                 <View style={styles.listContainer}>
                     <View style={styles.imageCircle}>
                         <Image
                             style={styles.listImage}
-                            source={require('./src/images/laotzu.jpg')}/>
+                            source={require('./src/images/rumi.jpg')}/>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
-                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+                        <Text style={styles.itemTextTitle}>Rumi</Text>
+                        <Text style={styles.itemTextSubtitle}>1207 - 1273  {"\n"}Sufi poetry, Hanafi, Muslim</Text>
 
                     </View>
                 </View>
+                    </TouchableOpacity>
 
-                <View style={styles.listContainer}>
-                    <View style={styles.imageCircle}>
-                        <Image
-                            style={styles.listImage}
-                            source={require('./src/images/laotzu.jpg')}/>
-                    </View>
-                    <View style={styles.textContainer}>
-                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
-                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
 
-                    </View>
-                </View>
+
+                {/*MahatmaGandhi*/}
+                <TouchableOpacity onPress={() => navigation.navigate('MahatmaGandhi')}>
 
                 <View style={styles.listContainer}>
                     <View style={styles.imageCircle}>
                         <Image
                             style={styles.listImage}
-                            source={require('./src/images/laotzu.jpg')}/>
+                            source={require('./src/images/MahatmaGandhi.jpg')}/>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
-                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+                        <Text style={styles.itemTextTitle}>Mahatma Gandhi</Text>
+                        <Text style={styles.itemTextSubtitle}>1869 - 1948 {"\n"} Lawyer, Politician, Activist, Writer</Text>
 
                     </View>
                 </View>
+                </TouchableOpacity>
+
+
+
+                {/*Nelson Mandela*/}
+                <TouchableOpacity onPress={() => navigation.navigate('NelsonMandela')}>
 
                 <View style={styles.listContainer}>
                     <View style={styles.imageCircle}>
                         <Image
                             style={styles.listImage}
-                            source={require('./src/images/laotzu.jpg')}/>
+                            source={require('./src/images/NelsonMandela.jpg')}/>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
-                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+                        <Text style={styles.itemTextTitle}>Nelson Mandela</Text>
+                        <Text style={styles.itemTextSubtitle}>1918 - 2013 {"\n"} Activist, Politician, Philanthropist</Text>
 
                     </View>
                 </View>
+                </TouchableOpacity>
+
+
+                {/*Pablo Picasso*/}
+                <TouchableOpacity onPress={() => navigation.navigate('PabloPicasso')}>
 
                 <View style={styles.listContainer}>
                     <View style={styles.imageCircle}>
                         <Image
                             style={styles.listImage}
-                            source={require('./src/images/laotzu.jpg')}/>
+                            source={require('./src/images/Picasso.jpg')}/>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
-                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+                        <Text style={styles.itemTextTitle}>Pablo Picasso </Text>
+                        <Text style={styles.itemTextSubtitle}>1908 - 1973 {"\n"}Painting, sculpture, printmaking, writing</Text>
 
                     </View>
                 </View>
+                </TouchableOpacity>
+
+
+                {/*Abraham Lincoln*/}
+                <TouchableOpacity onPress={() => navigation.navigate('AbrahamLincoln')}>
 
                 <View style={styles.listContainer}>
                     <View style={styles.imageCircle}>
                         <Image
                             style={styles.listImage}
-                            source={require('./src/images/laotzu.jpg')}/>
+                            source={require('./src/images/AbrahamLincoln.jpg')}/>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.itemTextTitle}>Lao Tzu </Text>
-                        <Text style={styles.itemTextSubtitle}>"The best fighter is never angry"</Text>
+                        <Text style={styles.itemTextTitle}>Abraham Lincoln </Text>
+                        <Text style={styles.itemTextSubtitle}>1809 - 1865{"\n"}16th President of the United States</Text>
 
                     </View>
                 </View>
+                </TouchableOpacity>
+
+
+
+                {/*John Lennon*/}
+                <TouchableOpacity onPress={() => navigation.navigate('JohnLennon')}>
+
+                <View style={styles.listContainer}>
+                    <View style={styles.imageCircle}>
+                        <Image
+                            style={styles.listImage}
+                            source={require('./src/images/JohnLennon.jpg')}/>
+                    </View>
+                    <View style={styles.textContainer}>
+                        <Text style={styles.itemTextTitle}>John Lennon </Text>
+                        <Text style={styles.itemTextSubtitle}>1969 - 1980 {"\n"}Singer, Songwriter</Text>
+
+                    </View>
+                </View>
+                </TouchableOpacity>
+
+
             </ScrollView>
         </SafeAreaView>
         </View>
@@ -171,6 +212,12 @@ function AllPhilosophers() {
                 <Stack.Screen name="LaoTzu" component={LaoTzuQuote} />
                 <Stack.Screen name="AlbertEinstein" component={AlbertEinsteinQuotes} />
                 <Stack.Screen name="OscarWilde" component={OscarWildeQuotes} />
+                <Stack.Screen name="Rumi" component={RumiQuotes} />
+                <Stack.Screen name="MahatmaGandhi" component={MahatmaGandhiQuotes} />
+                <Stack.Screen name="NelsonMandela" component={NelsonMandelaQuotes} />
+                <Stack.Screen name="PabloPicasso" component={PabloPicassoQuotes} />
+                <Stack.Screen name="AbrahamLincoln" component={AbrahamLincolnQuotes} />
+                <Stack.Screen name="JohnLennon" component={JohnLennonQuotes} />
             </Stack.Navigator>
         </NavigationContainer>
     );
@@ -195,7 +242,6 @@ const styles = StyleSheet.create({
     listContainer: {
         flexDirection: 'row',
         alignItems: 'flex-start',
-
         marginTop: 20,
 
 
@@ -223,10 +269,13 @@ const styles = StyleSheet.create({
     },
     itemTextTitle: {
         flexDirection: 'row',
-        fontSize: 20,
-        fontWeight: 'bold',
+        fontSize: 19,
+
     },
-    itemTextSubtitle: {},
+    itemTextSubtitle: {
+        color: '#747674',
+        fontSize: 14
+    },
 
 
 });

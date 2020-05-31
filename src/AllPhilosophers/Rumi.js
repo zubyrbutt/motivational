@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import {Text, View, StyleSheet, Dimensions, StatusBar} from 'react-native';
 import Swiper from 'react-native-swiper';
 
-import LaoTzuQuotes from '../data/laotzu'
+import RumiQuotes from '../data/Rumi'
 
 const { width } = Dimensions.get('window');
 
 
-export default class LaoTzu extends Component {
+export default class Rumi extends Component {
     render() {
         return (
 
@@ -16,7 +16,7 @@ export default class LaoTzu extends Component {
             >
 
                 {
-                    LaoTzuQuotes.LaoTzu.map(data => {
+                    RumiQuotes.Rumi.map(data => {
                         return (
 
                             <View style={styles.container} key="{data.quotes}">
@@ -31,7 +31,7 @@ export default class LaoTzu extends Component {
                                 </View>
                                 <View style={styles.PoetryBox}>
                                     <Text style={styles.PoetryText}>{data.quotes}</Text>
-                                    <Text style={styles.PoetName}>― Lao Tzu</Text>
+                                    <Text style={styles.PoetName}>― Rumi</Text>
                                 </View>
                             </View>
                         );
@@ -56,10 +56,9 @@ export default class LaoTzu extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 12,
+        backgroundColor: '#F7C417'
     },
     PoetryBox: {
         justifyContent: 'center',
@@ -68,19 +67,20 @@ const styles = StyleSheet.create({
     },
     PoetryText: {
         textAlign: 'center',
-        fontSize: 27,
-        color: '#000',
-        fontFamily: 'Hitsmaker',
+        fontSize: 25,
+        color: '#302D26',
+
+        margin: 15
 
     },
     PoetName: {
         fontSize: 16,
         marginTop: 40,
         marginLeft: 100,
-        color: 'black',
+        color: '#302D26',
 
 
-}
+    }
 
 
 });

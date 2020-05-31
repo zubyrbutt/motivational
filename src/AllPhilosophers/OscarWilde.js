@@ -74,28 +74,14 @@ const styles = StyleSheet.create({
     PoetName: {
         fontSize: 16,
         bottom: 100,
-
         color: 'black',
         position: 'absolute',
-
     },
     text: {
         color: '#fff',
         fontSize: 30,
         fontWeight: 'bold'
     },
-    image: {
-        width,
-        flex: 1
-    },
-    paginationStyle: {
-        position: 'absolute',
-        bottom: 10,
-        right: 10
-    },
-    paginationText: {
-        color: 'white',
-        fontSize: 20
-    }
+
 
 });

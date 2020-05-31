@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import {Text, View, StyleSheet, Dimensions, StatusBar} from 'react-native';
 import Swiper from 'react-native-swiper';
 
-import LaoTzuQuotes from '../data/laotzu'
+import JohnLennonQuotes from '../data/JohnLennon'
 
 const { width } = Dimensions.get('window');
 
 
-export default class LaoTzu extends Component {
+export default class JohnLennon extends Component {
     render() {
         return (
 
@@ -16,7 +16,7 @@ export default class LaoTzu extends Component {
             >
 
                 {
-                    LaoTzuQuotes.LaoTzu.map(data => {
+                    JohnLennonQuotes.JohnLennon.map(data => {
                         return (
 
                             <View style={styles.container} key="{data.quotes}">
@@ -31,7 +31,7 @@ export default class LaoTzu extends Component {
                                 </View>
                                 <View style={styles.PoetryBox}>
                                     <Text style={styles.PoetryText}>{data.quotes}</Text>
-                                    <Text style={styles.PoetName}>― Lao Tzu</Text>
+                                    <Text style={styles.PoetName}>― John Lennon</Text>
                                 </View>
                             </View>
                         );
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     },
     PoetryText: {
         textAlign: 'center',
-        fontSize: 27,
+        fontSize: 25,
         color: '#000',
         fontFamily: 'Hitsmaker',
 
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         color: 'black',
 
 
-}
+    }
 
 
 });
